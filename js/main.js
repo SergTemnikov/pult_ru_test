@@ -201,6 +201,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
  const listItem = document.querySelectorAll('.list__item')
  const listImage = document.querySelectorAll('.list__image')
+ const listItemLink = document.querySelectorAll('.list__item-link')
 
  let listItemIndex = 0
 
@@ -213,11 +214,34 @@ window.addEventListener('DOMContentLoaded', () => {
   listImage[n].classList.add('active')
 }
 
+  const activeItem = n => {
+    listItemLink.forEach((item, itemIndex) => {
+      item.classList.remove('active')
+    })
+    listItemLink[n].classList.add('active')
+  }
+  
+
+
   listItem.forEach((item, itemIndex) => {
     item.addEventListener('mouseover', () => {
       listItemIndex = itemIndex
       activeImage(listItemIndex)
+      activeItem(listItemIndex)
     })
+  })
+
+// Footer 
+
+  const footerPhoneTitle = document.querySelector('.footer__phone-title')
+  const phoneLine = document.querySelector('.phone__line')
+
+  footerPhoneTitle.addEventListener('mouseover', () => {
+    phoneLine.classList.add('active')
+  })
+
+  footerPhoneTitle.addEventListener('mouseout', () => {
+    phoneLine.classList.remove('active')
   })
 
 })
