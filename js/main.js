@@ -197,4 +197,27 @@ window.addEventListener('DOMContentLoaded', () => {
   })
 
 
+// List
+
+ const listItem = document.querySelectorAll('.list__item')
+ const listImage = document.querySelectorAll('.list__image')
+
+ let listItemIndex = 0
+
+ listImage[0].classList.add('active')
+
+ const activeImage = n => {
+  listImage.forEach(item => {
+    item.classList.remove('active')
+  })
+  listImage[n].classList.add('active')
+}
+
+  listItem.forEach((item, itemIndex) => {
+    item.addEventListener('mouseover', () => {
+      listItemIndex = itemIndex
+      activeImage(listItemIndex)
+    })
+  })
+
 })
