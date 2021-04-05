@@ -3,11 +3,11 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Slider one
 
-  const slidesOne = document.querySelectorAll('.slider__one-item')
-  const dotsOneWrapper = document.querySelector('.slider__one-dots')
+  const slidesOne = document.querySelectorAll('.slider-one-item')
+  const dotsOneWrapper = document.querySelector('.slider-one-dots')
   const indicatorsOne = document.createElement('div')
   
-  indicatorsOne.classList.add('slider__one-dots-inner')
+  indicatorsOne.classList.add('slider-one-dots-inner')
 
   const dotsOne = []
 
@@ -62,9 +62,9 @@ window.addEventListener('DOMContentLoaded', () => {
   setInterval(nextSlideOne, 3800)
 // Slider one, changing styles on mouse events
 
-  const sliderOneItem =document.querySelectorAll('.slider__one-item')
-  const sliderOneImage = document.querySelectorAll('.slider__one-image')
-  const sliderOneInfo = document.querySelectorAll('.slider__one-info')
+  const sliderOneItem =document.querySelectorAll('.slider-one-item')
+  const sliderOneImage = document.querySelectorAll('.slider-one__image')
+  const sliderOneInfo = document.querySelectorAll('.slider-one__info')
 
   sliderOneItem.forEach(slide => {
 
@@ -111,14 +111,14 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // Slider two
 
-  const slidesTwo = document.querySelectorAll('.slider__two-item')
-  const dotsTwoWrapper = document.querySelector('.slider__two-dots')
-  const sliderTwoItem =document.querySelectorAll('.slider__two-item')
-  const sliderTwoImage = document.querySelectorAll('.slider__two-image')
-  const sliderTwoInfo = document.querySelectorAll('.slider__two-info')
+  const slidesTwo = document.querySelectorAll('.slider-two-item')
+  const dotsTwoWrapper = document.querySelector('.slider-two-dots')
+  const sliderTwoItem =document.querySelectorAll('.slider-two-item')
+  const sliderTwoImage = document.querySelectorAll('.slider-two__image')
+  const sliderTwoInfo = document.querySelectorAll('.slider-two__info')
 
   const indicatorsTwo = document.createElement('div')
-  indicatorsTwo.classList.add('slider__two-dots-inner')
+  indicatorsTwo.classList.add('slider-two-dots-inner')
 
   const dotsTwo = []
 
@@ -199,9 +199,9 @@ window.addEventListener('DOMContentLoaded', () => {
 
 // List
 
- const listItem = document.querySelectorAll('.list__item')
+ const listItem = document.querySelectorAll('.list-item')
  const listImage = document.querySelectorAll('.list__image')
- const listItemLink = document.querySelectorAll('.list__item-link')
+ const listItemLink = document.querySelectorAll('.list-item__link')
 
  let listItemIndex = 0
 
@@ -215,7 +215,7 @@ window.addEventListener('DOMContentLoaded', () => {
 }
 
   const activeItem = n => {
-    listItemLink.forEach((item, itemIndex) => {
+    listItemLink.forEach(item => {
       item.classList.remove('active')
     })
     listItemLink[n].classList.add('active')
